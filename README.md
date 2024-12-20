@@ -85,7 +85,7 @@ Customize the floating widget position and visibility as needed. By default, it 
 
 ## Example Project
 
-Check out the [example app](https://github.com/AsadbekTurgunboyev/LogBox/tree/main/example) to see LogBox in action.
+Check out the [example app](https://github.com/AsadbekTurgunboyev/LogBox/tree/main/app) to see LogBox in action.
 
 ---
 
