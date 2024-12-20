@@ -110,4 +110,3 @@ Developed and maintained by [Asadbek Turgunboyev](https://github.com/AsadbekTurg
 ### Special Thanks
 
 Special thanks to everyone who helped in testing and providing feedback for LogBox. ❤️
-```
