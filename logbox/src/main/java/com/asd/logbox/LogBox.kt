@@ -1,7 +1,11 @@
 package com.asd.logbox
 
+import android.content.Context
+import android.content.Intent
+import android.util.Log
 import com.asd.logbox.data.model.LogEntry
 import com.asd.logbox.data.repository.LogRepository
+import com.asd.logbox.service.FloatingWidgetService
 import com.asd.logbox.utils.LogBoxConfig
 import com.asd.logbox.utils.LogLevel
 
@@ -9,10 +13,12 @@ object LogBox {
     private var logRepository: LogRepository? = null
     private var logLevel = LogLevel.DEBUG
 
-    fun init(config: LogBoxConfig.() -> Unit) {
+    fun init(context: Context, config: LogBoxConfig.() -> Unit) {
         val configuration = LogBoxConfig().apply(config)
         logLevel = configuration.logLevel
         logRepository = configuration.repository
+        Log.d("tekshirish", "init: jarayaon")
+        context.startService(Intent(context, FloatingWidgetService::class.java))
     }
 
     fun log(level: LogLevel, message: String) {
@@ -27,4 +33,8 @@ object LogBox {
     fun info(message: String) = log(LogLevel.INFO, message)
     fun warn(message: String) = log(LogLevel.WARN, message)
     fun error(message: String) = log(LogLevel.ERROR, message)
+
+    fun getLogs(): List<LogEntry> {
+        return logRepository?.getLogs() ?: emptyList()
+    }
 }
