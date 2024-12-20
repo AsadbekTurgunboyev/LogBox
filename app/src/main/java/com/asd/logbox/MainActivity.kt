@@ -12,12 +12,13 @@ import com.asd.logbox.utils.LogLevel
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.asd.logbox.example.R.layout.activity_main)
+        setContentView(R.layout.activity_main)
 
         LogBox.init(this) {
             logLevel = LogLevel.DEBUG
             checkOverlayPermission(this@MainActivity)
         }
+        LogBox.debug("salom")
     }
 
     fun checkOverlayPermission(context: Context) {
