@@ -12,14 +12,34 @@ LogBox is a lightweight and easy-to-use logging library for Android applications
 - **Easy Integration**: Add the library and start logging with minimal setup.
 
 ---
+Ha, agar foydalanuvchi `LogBox` kutubxonasini o'z loyihasiga qo'shmoqchi bo'lsa, JitPack-dan foydalanish uchun JitPack repository-ni `build.gradle` fayliga qo'shishi kerak. Bu ma'lumotni `README.md` fayliga quyidagicha qo'shishingiz mumkin:
+
 
 ## Installation
 
-To integrate LogBox into your Android project, add the following dependency to your `build.gradle` file:
+To integrate LogBox into your Android project, you need to add JitPack to your project-level `build.gradle` file:
+
+### Step 1: Add JitPack Repository
+
+In your project-level `build.gradle` file, add the JitPack repository:
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+### Step 2: Add LogBox Dependency
+
+Then, add the following dependency to your app-level `build.gradle` file:
 
 ```gradle
 implementation 'com.github.AsadbekTurgunboyev:LogBox:2.2.2'
 ```
+
 
 ## Usage
 
