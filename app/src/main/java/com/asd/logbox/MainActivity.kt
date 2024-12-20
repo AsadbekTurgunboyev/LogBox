@@ -3,6 +3,7 @@ package com.asd.logbox
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
@@ -11,7 +12,7 @@ import com.asd.logbox.utils.LogLevel
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(com.asd.logbox.example.R.layout.activity_main)
 
         LogBox.init(this) {
             logLevel = LogLevel.DEBUG
