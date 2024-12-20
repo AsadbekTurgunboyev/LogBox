@@ -36,9 +36,13 @@ android {
 publishing {
     publications {
         register<MavenPublication>("release") {
-           afterEvaluate{
-               from(components["release"])
-           }
+            groupId = "com.github.AsadbekTurgunboyev"
+            artifactId = "logbox"
+            version = "1.0.3"
+
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
