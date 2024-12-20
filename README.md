@@ -20,7 +20,7 @@ To integrate LogBox into your Android project, add the following dependency to y
 ```gradle
 implementation 'com.github.AsadbekTurgunboyev:LogBox:2.2.2'
 ```
-```markdown
+
 ## Usage
 
 ### Step 1: Initialize LogBox
