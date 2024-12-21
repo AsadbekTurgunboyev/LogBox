@@ -14,11 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        LogBox.init(this) {
-            logLevel = LogLevel.DEBUG
-            checkOverlayPermission(this@MainActivity)
-        }
-        LogBox.debug("salom")
+        LogBox.debug("tekshirish","Salom")
+
     }
 
     fun checkOverlayPermission(context: Context) {

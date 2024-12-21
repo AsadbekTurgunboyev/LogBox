@@ -1,3 +1,5 @@
+![LogBox Poster](imgs/poster_img.png)
+
 # LogBox
 
 LogBox is a lightweight and easy-to-use logging library for Android applications. It provides an overlay widget to display logs in real-time while debugging, allowing developers to monitor logs directly within the app's UI.
@@ -12,7 +14,6 @@ LogBox is a lightweight and easy-to-use logging library for Android applications
 - **Easy Integration**: Add the library and start logging with minimal setup.
 
 ---
-
 
 ## Installation
 
