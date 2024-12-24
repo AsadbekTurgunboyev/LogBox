@@ -2,8 +2,11 @@ package com.asd.logbox.provider
 
 import android.content.ContentProvider
 import android.content.ContentValues
+import android.content.Context
+import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
+import android.provider.Settings
 import com.asd.logbox.LogBox
 import com.asd.logbox.utils.LogLevel
 
@@ -18,6 +21,12 @@ class LogBoxInitProvider : ContentProvider() {
         return true
     }
 
+    fun checkOverlayPermission(context: Context) {
+        if (!Settings.canDrawOverlays(context)) {
+            val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:${context.packageName}"))
+            context.startActivity(intent)
+        }
+    }
     override fun query(
         uri: Uri,
         projection: Array<out String>?,

@@ -1,11 +1,15 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="60dp"
-    android:layout_height="60dp"
-    android:background="#DD3333"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="#1CDDC1"
     android:elevation="8dp">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp" />
-</FrameLayout>
+        android:layout_width="60dp"
+        android:src="@drawable/img"
+        android:padding="6dp"
+        android:scaleType="centerCrop"
+        android:layout_height="60dp" />
+</androidx.cardview.widget.CardView>

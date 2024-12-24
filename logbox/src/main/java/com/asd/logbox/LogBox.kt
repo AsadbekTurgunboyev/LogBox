@@ -12,10 +12,13 @@ object LogBox {
     private var logRepository: LogRepository? = null
     private var logLevel = LogLevel.DEBUG
 
+
     fun init(context: Context, config: LogBoxConfig.() -> Unit) {
         val configuration = LogBoxConfig().apply(config)
+
         logLevel = configuration.logLevel
         logRepository = configuration.repository
+
         context.startService(Intent(context, FloatingWidgetService::class.java))
     }
 
