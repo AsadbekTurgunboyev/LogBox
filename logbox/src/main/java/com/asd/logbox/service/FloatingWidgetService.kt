@@ -1,20 +1,16 @@
 package com.asd.logbox.service
 
 import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.graphics.PixelFormat
 import android.os.IBinder
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
-import androidx.appcompat.app.AppCompatActivity
 import com.asd.logbox.R
 import com.asd.logbox.ui.ShowLogDialogActivity
-import com.asd.logbox.ui.dialog.LogBoxDialogFragment
 
 class FloatingWidgetService : Service(), View.OnTouchListener {
 
